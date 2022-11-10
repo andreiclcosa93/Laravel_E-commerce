@@ -45,4 +45,10 @@ Route::get('/update_product/{id}', [AdminController::class, 'update_product']);
 
 Route::post('/update_product_confirm/{id}', [AdminController::class, 'update_product_confirm']);
 
+//buttons card -> products
+Route::get('/product_details/{id}', [HomeController::class, 'product_details']);
+
+// button add cart
+Route::post('/add_cart/{id}', [HomeController::class, 'add_cart']);
+
 require __DIR__.'/auth.php';
