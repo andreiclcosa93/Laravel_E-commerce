@@ -53,6 +53,15 @@
             @include('home.header')
          <!-- end header section -->
 
+         @if(session()->has('message'))
+
+            <div class="alert alert-success">
+                <button class="close" type="button" data-dismiss="alert" aria-hidden="true">X</button>
+                {{ session()->get('message') }}
+            </div>
+
+        @endif
+
       <div class="center">
         <table>
             <tr>
@@ -85,6 +94,13 @@
 
         <div class="alert alert-info" style="width: 42%;">
             <h1>Total Price: ${{ $totalprice }}</h1>
+        </div>
+
+        <div style="padding-top: 20px;">
+            <h1 style="font-size: 20px;">Proceed to Order</h1><br>
+
+            <a href="{{ url('cash_order') }}" class="btn btn-dark">Cash On Delivery</a>
+            <a href="" class="btn btn-success">Pay Using Card</a>
         </div>
 
       </div>

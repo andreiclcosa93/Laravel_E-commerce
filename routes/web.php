@@ -57,4 +57,7 @@ Route::get('/show_cart', [HomeController::class, 'show_cart']);
 // delete item table
 Route::get('/remove_cart/{id}', [HomeController::class, 'remove_cart']);
 
+//pay cash method
+Route::get('/cash_order', [HomeController::class, 'cash_order']);
+
 require __DIR__.'/auth.php';
