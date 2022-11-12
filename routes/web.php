@@ -51,4 +51,10 @@ Route::get('/product_details/{id}', [HomeController::class, 'product_details']);
 // button add cart
 Route::post('/add_cart/{id}', [HomeController::class, 'add_cart']);
 
+// showsection cart
+Route::get('/show_cart', [HomeController::class, 'show_cart']);
+
+// delete item table
+Route::get('/remove_cart/{id}', [HomeController::class, 'remove_cart']);
+
 require __DIR__.'/auth.php';
