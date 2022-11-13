@@ -60,4 +60,10 @@ Route::get('/remove_cart/{id}', [HomeController::class, 'remove_cart']);
 //pay cash method
 Route::get('/cash_order', [HomeController::class, 'cash_order']);
 
+//pay card method
+Route::get('/stripe/{totalprice}', [HomeController::class, 'stripe']);
+Route::post('stripe', [HomeController::class, 'stripePost'])->name('stripe.post');
+
+
+
 require __DIR__.'/auth.php';

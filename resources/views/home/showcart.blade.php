@@ -100,7 +100,7 @@
             <h1 style="font-size: 20px;">Proceed to Order</h1><br>
 
             <a href="{{ url('cash_order') }}" class="btn btn-dark">Cash On Delivery</a>
-            <a href="" class="btn btn-success">Pay Using Card</a>
+            <a href="{{ url('stripe', $totalprice) }}" class="btn btn-success">Pay Using Card</a>
         </div>
 
       </div>
