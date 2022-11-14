@@ -64,6 +64,11 @@ Route::get('/cash_order', [HomeController::class, 'cash_order']);
 Route::get('/stripe/{totalprice}', [HomeController::class, 'stripe']);
 Route::post('stripe', [HomeController::class, 'stripePost'])->name('stripe.post');
 
+// display module order
+Route::get('/order', [AdminController::class, 'order']);
+Route::get('/delivered/{id}', [AdminController::class, 'delivered']);
 
+// btn print PDF
+Route::get('/print_pdf/{id}', [AdminController::class, 'print_pdf']);
 
 require __DIR__.'/auth.php';
