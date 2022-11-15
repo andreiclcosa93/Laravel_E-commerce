@@ -71,4 +71,7 @@ Route::get('/delivered/{id}', [AdminController::class, 'delivered']);
 // btn print PDF
 Route::get('/print_pdf/{id}', [AdminController::class, 'print_pdf']);
 
+// search input
+Route::get('/search', [AdminController::class, 'searchdata']);
+
 require __DIR__.'/auth.php';

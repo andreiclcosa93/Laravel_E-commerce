@@ -152,5 +152,14 @@ class AdminController extends Controller
         return $pdf->stream('files.pdf');
     }
 
+    public function searchdata(Request $request)
+    {
+        $searchText=$request->search;
+
+        $order=Order::where('name', 'LIKE', "%$searchText%")->orWhere('phone', 'LIKE', "%$searchText%")->orWhere('product_title', 'LIKE', "%$searchText%")->get();
+
+        return view('admin.order', compact('order'));
+    }
+
 
 }
