@@ -67,6 +67,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <<<<<<< HEAD
 
 
-Cosa Andrei project laravel
+
 =======
 >>>>>>> 6a26614 (Search for Ordered Product in Cpanel)
