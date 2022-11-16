@@ -74,4 +74,8 @@ Route::get('/print_pdf/{id}', [AdminController::class, 'print_pdf']);
 // search input
 Route::get('/search', [AdminController::class, 'searchdata']);
 
+Route::get('/show_order', [HomeController::class, 'show_order']);
+
+Route::get('/cancel_order/{id}', [HomeController::class, 'cancel_order']);
+
 require __DIR__.'/auth.php';
