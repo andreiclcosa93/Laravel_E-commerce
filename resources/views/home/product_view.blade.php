@@ -1,12 +1,9 @@
 <section class="product_section layout_padding">
     <div class="container">
        <div class="heading_container heading_center">
-          <h2>
-             Our <span>products</span>
-          </h2>
-          <br><br>
+
             <div>
-                <form action="{{ url('product_search') }}" method="POST">
+                <form action="{{ url('search_product') }}" method="POST">
                     @csrf
                     <input style="width: 400px;" type="text" name="search" placeholder="Search">
 
@@ -18,12 +15,13 @@
 
        @if(session()->has('message'))
 
-            <div class="alert alert-success">
-                <button class="close" type="button" data-dismiss="alert" aria-hidden="true">X</button>
-                {{ session()->get('message') }}
-            </div>
+       <div class="alert alert-success">
+           <button class="close" type="button" data-dismiss="alert" aria-hidden="true">X</button>
+           {{ session()->get('message') }}
+       </div>
 
         @endif
+
 
        <div class="row">
             @foreach($product as $products)
