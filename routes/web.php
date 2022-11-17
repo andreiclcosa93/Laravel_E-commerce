@@ -83,4 +83,7 @@ Route::post('/add_comment', [HomeController::class, 'add_comment']);
 
 Route::post('/add_reply', [HomeController::class, 'add_reply']);
 
+// search
+Route::get('/product_search', [HomeController::class, 'product_search']);
+
 require __DIR__.'/auth.php';

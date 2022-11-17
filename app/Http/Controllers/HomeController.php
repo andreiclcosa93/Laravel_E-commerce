@@ -311,5 +311,23 @@ class HomeController extends Controller
         }
     }
 
+    public function product_search(Request $request)
+    {
+
+        $comment=Comment::order('id', 'desc')->get();
+        $reply=Reply::all();
+        // primele 2 sunt din functia index
+
+
+        $search_text=$request->search;
+                                // search repr numele din form
+        $product=Product::where('title','LIKE',"%$search_text%")->orWhere('category','LIKE',"$search_text")->paginate(10);
+        // $product - repr primul $ din   @foreach($product as $products)
+        // ('title') - coloana din tabela
+
+        return view('home.userpage', compact('product', 'comment', 'reply'));
+        // 'home.userpage' - vederea unde se afla tabela si campul search
+    }
+
 
 }
